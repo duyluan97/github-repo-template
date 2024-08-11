@@ -30,7 +30,7 @@ Welcome to the Template Repository on GitHub! This repository is designed to ser
 
 - .github/: This directory contains GitHub-specific configuration files:
 
-- ISSUE_TEMPLATE/: A template for creating consistent issue reports.
+  - ISSUE_TEMPLATE/: A template for creating consistent issue reports.
   - dependabot.yml: Configuration for Dependabot, which helps keep your dependencies up-to-date.
   - pull_request_template.md: A template for pull requests to ensure all necessary information is provided.
   - workflows/: Contains GitHub Actions workflows such as hello_world.yaml (a sample workflow) and stale.yaml (to mark inactive issues or PRs as stale).
