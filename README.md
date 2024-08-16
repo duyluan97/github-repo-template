@@ -53,4 +53,4 @@ If you find any issues or have suggestions for improving this template repositor
 
 ## License
 
-This repository is licensed under the MIT License. See the LICENSE file for more information.
+This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
