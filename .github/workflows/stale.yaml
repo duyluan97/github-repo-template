@@ -4,9 +4,15 @@ on:
   schedule:
     - cron: '0 0 * * *'  # Run every day at midnight
 
+permissions:
+  contents: read
+
 jobs:
-  close_stale_prs:
+  stale:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
     steps:
       - name: Close stale pull requests
         uses: actions/stale@v9.0.0
