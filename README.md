@@ -1,5 +1,7 @@
 # 🛠️ GitHub Repo Template
 
+TEST
+
 Welcome to the Template Repository on GitHub! This repository is designed to serve as a starting point for creating new Git repositories with best practices and configurations already set up. Below is a brief overview of the structure and the purpose of each file and directory in this repository.
 
 ## 📁 Repository Structure
