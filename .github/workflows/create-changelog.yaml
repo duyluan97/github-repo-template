@@ -7,6 +7,9 @@ jobs:
   changelog:
     runs-on: ubuntu-latest
     steps:
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v4
+        
       - name: "✏️ Generate release changelog"
         uses: heinrichreimer/action-github-changelog-generator@v2.4
         with:
