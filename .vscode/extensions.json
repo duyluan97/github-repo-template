@@ -4,6 +4,7 @@
         "visualstudioexptteam.vscodeintellicode",
         "esbenp.prettier-vscode",
         "eamodio.gitlens",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        "seatonjiang.gitmoji-vscode"
     ]
 }
