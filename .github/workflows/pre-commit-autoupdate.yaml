@@ -1,6 +1,8 @@
 name: Pre-commit Check with Autoupdate
 
 on:
+  schedule:
+    - cron: '0 0 * * 1' # Runs every Monday at midnight
   push:
     branches:
       - main
