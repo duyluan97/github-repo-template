@@ -1,4 +1,4 @@
-# File: .github/workflows/template-sync.yml
+name: Template Repo Sync
 
 on:
   schedule:
@@ -22,6 +22,6 @@ jobs:
       - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@v2
         with:
-          source_repo_path: uyl97/github-repo-template
+          source_repo_path: duyl97/github-repo-template
           upstream_branch: main
           pr_labels: template_sync
