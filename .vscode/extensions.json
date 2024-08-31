@@ -5,6 +5,8 @@
         "esbenp.prettier-vscode",
         "eamodio.gitlens",
         "streetsidesoftware.code-spell-checker",
-        "seatonjiang.gitmoji-vscode"
+        "seatonjiang.gitmoji-vscode",
+        "pkief.material-icon-theme",
+        "equinusocio.vsc-material-theme"
     ]
 }
