@@ -6,23 +6,67 @@ Welcome to the Template Repository on GitHub! This repository is designed to ser
 
 ```text
 .
-├── .editorconfig                  # 📝 Defines and maintains consistent coding styles across editors/IDEs
-├── .github                        # ⚙️ Contains GitHub-specific configurations
-│   ├── ISSUE_TEMPLATE
-│   │   └── issue_template.md      # 🗒️ Template for consistent issue reporting
-│   ├── dependabot.yml             # 🤖 Configuration for Dependabot to manage dependencies
-│   ├── pull_request_template.md   # 📝 Template to ensure all necessary information is included in PRs
-│   └── workflows
-│       ├── hello_world.yaml       # 🌐 Example GitHub Actions workflow (hello world)
-│       └── stale.yaml             # 🕰️ Workflow to mark inactive issues or PRs as stale
-├── .gitignore                     # 🚫 Specifies files and directories to be ignored by Git
-├── .pre-commit-config.yaml        # ✅ Configuration for pre-commit hooks to enforce code quality
-├── .vscode                        # 💻 Visual Studio Code-specific settings
-│   └── extensions.json            # 📦 List of recommended VSCode extensions for the project
-├── CODEOWNERS                     # 👥 Defines code owners for repository files/directories
-├── LICENSE                        # 📜 License under which the repository's content can be used
-└── README.md                      # 📖 Provides an overview of the project, structure, and usage instructions
+├── .editorconfig                       # 🖊️ Configuration for consistent coding styles
+├── .github                             # 🛠️ GitHub-specific configurations
+│   ├── ISSUE_TEMPLATE                  # 📝 GitHub issue template
+│   │   └── issue_template.md           # 📝 Issue template file
+│   ├── dependabot.yml                  # 🤖 Dependabot configuration
+│   ├── pull_request_template.md        # 📝 Pull request template
+│   └── workflows                       # ⚙️ GitHub Actions workflows
+│       ├── deps-review.yaml            # 📋 Dependency review workflow
+│       ├── lint-pr.yaml                # 🧹 Linting workflow for pull requests
+│       ├── pre-commit-auto-update.yaml # 🔄 Pre-commit hook auto-update workflow
+│       ├── release.yaml                # 🚀 Release workflow
+│       ├── stale.yaml                  # ⏳ Stale issue management workflow
+│       └── template-repo-sync.yaml     # 🔄 Template repository sync workflow
+├── .gitignore                          # 🚫 Files and directories to be ignored by Git
+├── .pre-commit-config.yaml             # 🛠️ Pre-commit hooks configuration
+├── .releaserc.json                     # 🚀 Semantic release configuration
+├── .vscode                             # 🖥️ VSCode-specific configurations
+│   └── extensions.json                 # 🛠️ Recommended extensions for VSCode
+├── CHANGELOG.md                        # 📝 Change log of the project
+├── CODEOWNERS                          # 👥 Defines the code owners for the repository
+├── LICENSE                             # ⚖️ License for the project
+└── README.md                           # 📖 Project documentation (this file)
 ```
+## ⚙️ Semantic Commit Messages
+This project uses [Semantic Commit Messages](https://www.conventionalcommits.org/) to ensure meaningful and consistent commit history. The format is as follows:
+
+```php
+<type>(<scope>): <subject>
+```
+
+### Types
+
+- `feat`: A new feature (e.g., `feat: add login functionality`).
+- `fix`: A bug fix (e.g., `fix: resolve login button issue`).
+- `docs`: Documentation changes (e.g., `docs: update API documentation`).
+- `style`: Code style changes (formatting, missing semi-colons, etc.) without changing logic (e.g., `style: fix indentation`).
+- `refactor`: Code changes that neither fix a bug nor add a feature (e.g., `refactor: update user controller structure`).
+- `test`: Adding or updating tests (e.g., `test: add unit tests for login service`).
+- `chore`: Changes to build process, auxiliary tools, or libraries (e.g., `chore: update dependencies`).
+
+### Scope
+
+Optional: The part of the codebase affected by the change (e.g., `feat(auth): add OAuth support`)
+
+### Subject
+
+A brief description of the change, using the imperative mood (e.g., `fix: resolve issue with user authentication`).
+
+## 🚀 Semantic Release
+
+This project is configured with [Semantic Release](https://semantic-release.gitbook.io/semantic-release) to automate the release process based on your commit messages.
+
+### How It Works
+
+1. Analyze commits: Semantic Release inspects commit messages to determine the type of changes in the codebase.
+2. Generate release version: Based on the commit type, it will automatically bump the version following semantic versioning:
+- fix → Patch release (e.g., 1.0.1)
+- feat → Minor release (e.g., 1.1.0)
+- BREAKING CHANGE → Major release (e.g., 2.0.0)
+3. Create release notes: It generates a changelog from the commit messages and includes it in the release.
+4. Publish: It automatically publishes the new version to the repository (and any other configured registries, e.g., npm).
 
 ## 🤝 Contributing
 
