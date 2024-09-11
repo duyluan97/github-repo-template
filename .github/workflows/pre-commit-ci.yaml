@@ -17,4 +17,4 @@ jobs:
 
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: "fix: Automated Change"
+        commit_message: "fix: Automated Changes by Pre-commit"
