@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.1](https://github.com/duyluann/github-repo-template/compare/v1.3.0...v1.3.1) (2024-09-11)
+
+
+### Bug Fixes
+
+* Update workflow pre-commit ([#35](https://github.com/duyluann/github-repo-template/issues/35)) ([56859e3](https://github.com/duyluann/github-repo-template/commit/56859e3599b6878b0c10d00326a146d4080661f3))
+
 # [1.3.0](https://github.com/duyluann/github-repo-template/compare/v1.2.1...v1.3.0) (2024-09-11)
 
 
