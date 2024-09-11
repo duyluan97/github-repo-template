@@ -1,4 +1,4 @@
-name: Pre-commit CI
+name: pre-commit
 
 on:
   pull_request:
@@ -9,30 +9,37 @@ jobs:
   pre-commit:
     runs-on: ubuntu-latest
     steps:
+    # Step 1: Checkout the repository
     - uses: actions/checkout@v3
+
+    # Step 2: Set up Python environment (required for pre-commit hooks)
     - uses: actions/setup-python@v3
+
+    # Step 3: Run pre-commit
     - uses: pre-commit/action@v3.0.1
       id: precommit
-      continue-on-error: true
+      continue-on-error: true  # Continue even if pre-commit fails
 
-    - name: Push changes if needed
-      if: failure()
+    # Step 4: Check if any files were modified by pre-commit, and push the changes
+    - name: Push changes if pre-commit modified files
+      if: failure()  # Run only if the pre-commit hook made changes and failed
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
         git add .
         git commit -m "Apply pre-commit fixes"
         git push origin ${{ github.ref }}
-      continue-on-error: true
+      continue-on-error: true  # In case no changes are there to commit (e.g., no actual modifications)
 
-    - name: Create a new Pull Request
-      if: github.ref == 'refs/heads/main' && steps.precommit.outcome == 'failure'
+    # Step 5: Create a pull request if we are on the main branch and pre-commit made changes
+    - name: Create a new Pull Request if changes were pushed to main
+      if: github.ref == 'refs/heads/main' && failure()
       uses: peter-evans/create-pull-request@v5
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        branch: auto/pre-commit-fixes  # A new branch for the fixes
+        branch: auto/pre-commit-fixes  # A temporary branch for the pre-commit fixes
         commit-message: "Pre-commit fixes"
         title: "Pre-commit fixes"
-        body: "This PR applies automatic pre-commit fixes."
+        body: "This PR applies automatic pre-commit fixes after a push to main."
         base: main
-        delete-branch: true
+        delete-branch: true  # Automatically delete the branch after merging
