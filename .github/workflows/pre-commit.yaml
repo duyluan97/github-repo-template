@@ -1,5 +1,4 @@
-name: pre-commit
-
+name: Pre-commit CI
 on:
   pull_request:
   push:
@@ -9,21 +8,18 @@ jobs:
   pre-commit:
     runs-on: ubuntu-latest
     steps:
-    # Step 1: Checkout the repository
     - uses: actions/checkout@v3
       with:
         token: ${{ secrets.WORKFLOW_TOKEN}}
 
-    # Step 2: Set up Python environment (required for pre-commit hooks)
     - uses: actions/setup-python@v3
 
-    # Step 3: Run pre-commit
     - uses: pre-commit/action@v3.0.1
-      id: precommit
-      continue-on-error: true  # Continue even if pre-commit fails
+      continue-on-error: true
 
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
         commit_message: fix: Automated Change
         branch: fix/pre-commit-auto
         create_branch: true
+   
