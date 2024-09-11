@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.3.0](https://github.com/duyluann/github-repo-template/compare/v1.2.1...v1.3.0) (2024-09-11)
+
+
+### Features
+
+* Workflow for pre-commit ([#33](https://github.com/duyluann/github-repo-template/issues/33)) ([cec9272](https://github.com/duyluann/github-repo-template/commit/cec927209ce328b916d1b131fc3c29481bc04114))
+
 ## [1.2.1](https://github.com/duyluann/github-repo-template/compare/v1.2.0...v1.2.1) (2024-09-11)
 
 
