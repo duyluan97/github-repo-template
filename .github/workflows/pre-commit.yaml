@@ -13,17 +13,7 @@ jobs:
     - uses: actions/setup-python@v3
     - uses: pre-commit/action@v3.0.1
       id: precommit
-      continue-on-error: trues
-
-    - name: Add a comment to the PR
-      if: failure() && github.event_name == 'pull_request'
-      uses: peter-evans/create-or-update-comment@v3
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        issue-number: ${{ github.event.pull_request.number }}
-        body: |
-          Pre-commit checks have failed. Please review and fix the following issues:
-          ${{ steps.precommit.outputs.stdout }}
+      continue-on-error: true
 
     - name: Push changes if needed
       if: failure()
@@ -34,3 +24,15 @@ jobs:
         git commit -m "Apply pre-commit fixes"
         git push origin ${{ github.ref }}
       continue-on-error: true
+
+    - name: Create a new Pull Request
+      if: github.ref == 'refs/heads/main' && steps.precommit.outcome == 'failure'
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: auto/pre-commit-fixes  # A new branch for the fixes
+        commit-message: "Pre-commit fixes"
+        title: "Pre-commit fixes"
+        body: "This PR applies automatic pre-commit fixes."
+        base: main
+        delete-branch: true
