@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.3](https://github.com/duyluann/github-repo-template/compare/v1.3.2...v1.3.3) (2024-09-11)
+
+
+### Bug Fixes
+
+* Update pre-commit-ci.yaml ([#37](https://github.com/duyluann/github-repo-template/issues/37)) ([a8128e3](https://github.com/duyluann/github-repo-template/commit/a8128e3ab033a3572063b70831ffc3ea4f490194))
+
 ## [1.3.2](https://github.com/duyluann/github-repo-template/compare/v1.3.1...v1.3.2) (2024-09-11)
 
 
