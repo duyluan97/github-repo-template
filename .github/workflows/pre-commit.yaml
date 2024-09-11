@@ -19,7 +19,4 @@ jobs:
 
     - uses: stefanzweifel/git-auto-commit-action@v5
       with:
-        commit_message: fix: Automated Change
-        branch: fix/pre-commit-auto
-        create_branch: true
-   
+        commit_message: "fix: Automated Change"
