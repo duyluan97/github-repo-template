@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.4.0](https://github.com/duyluann/github-repo-template/compare/v1.3.4...v1.4.0) (2024-09-12)
+
+
+### Features
+
+* Add semantic config for Dependabot ([#41](https://github.com/duyluann/github-repo-template/issues/41)) ([8f68e57](https://github.com/duyluann/github-repo-template/commit/8f68e5747acc236a6b05c1bf33958bee1140a0bd))
+
 ## [1.3.4](https://github.com/duyluann/github-repo-template/compare/v1.3.3...v1.3.4) (2024-09-12)
 
 
