@@ -7,5 +7,5 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "chore(deps)"
-      include: "Update GitHub Actions dependencies"
+      include: "scope"
     pull-request-title: "chore(deps): Update GitHub Actions dependencies"
