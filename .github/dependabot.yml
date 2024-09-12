@@ -5,3 +5,7 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "Update GitHub Actions dependencies"
+    pull-request-title: "chore(deps): Update GitHub Actions dependencies"
