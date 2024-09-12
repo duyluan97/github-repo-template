@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.4](https://github.com/duyluann/github-repo-template/compare/v1.3.3...v1.3.4) (2024-09-12)
+
+
+### Bug Fixes
+
+* Update lint-pr.yaml ([#40](https://github.com/duyluann/github-repo-template/issues/40)) ([0e318ce](https://github.com/duyluann/github-repo-template/commit/0e318ce2b05fc4a145258c12e6313fd2ed46fae5))
+
 ## [1.3.3](https://github.com/duyluann/github-repo-template/compare/v1.3.2...v1.3.3) (2024-09-11)
 
 
