@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [1.5.0](https://github.com/duyluann/github-repo-template/compare/v1.4.0...v1.5.0) (2024-09-22)
+
+
+### Features
+
+* Create cleanup-caches.yaml ([#46](https://github.com/duyluann/github-repo-template/issues/46)) ([901597c](https://github.com/duyluann/github-repo-template/commit/901597c0c48881f2332e46036b4e59c3dc073293))
+
 # [1.4.0](https://github.com/duyluann/github-repo-template/compare/v1.3.4...v1.4.0) (2024-09-12)
 
 
